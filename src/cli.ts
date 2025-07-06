@@ -14,7 +14,7 @@ program
   .argument('<a>', 'primeiro número')
   .argument('<b>', 'segundo número')
   .action((a: number, b: number) => {
-    console.log(soma(Number(a), Number(b)));
+    console.log(String(soma(Number(a), Number(b))));
   });
 
 program
@@ -23,7 +23,7 @@ program
   .argument('<a>', 'minuendo')
   .argument('<b>', 'subtraendo')
   .action((a: number, b: number) => {
-    console.log(subtrai(Number(a), Number(b)));
+    console.log(String(subtrai(Number(a), Number(b))));
   });
 
 program
@@ -32,7 +32,7 @@ program
   .argument('<a>', 'fator 1')
   .argument('<b>', 'fator 2')
   .action((a: number, b: number) => {
-    console.log(multiplica(Number(a), Number(b)));
+    console.log(String(multiplica(Number(a), Number(b))));
   });
 
 program
@@ -42,9 +42,9 @@ program
   .argument('<b>', 'divisor')
   .action((a: number, b: number) => {
     try {
-      console.log(divide(Number(a), Number(b)));
+      console.log(String(divide(Number(a), Number(b))));
     } catch (e: any) {
-      console.error(e.message);
+      throw new Error(e.message);
     }
   });
 
