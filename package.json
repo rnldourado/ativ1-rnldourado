@@ -7,7 +7,7 @@
   "build": "tsc",
   "test": "jest",
   "dev": "ts-node src/calculadora.ts"
-},
+}, 
   "keywords": [],
   "author": "",
   "license": "ISC",
